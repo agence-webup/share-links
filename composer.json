@@ -1,0 +1,21 @@
+{
+    "name": "webup/share-links",
+    "description": "Generate share links easily",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robin Parisi",
+            "email": "parisi.robin@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webup\\ShareLinks\\": "src"
+        }
+    }
+}
