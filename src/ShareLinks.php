@@ -40,11 +40,11 @@ class ShareLinks
 
     /**
     * Generate Linkedin share link
-    * @param  [type] $url     [description]
-    * @param  [type] $title   [description]
-    * @param  [type] $summary [description]
-    * @param  [type] $source  [description]
-    * @return [type]          [description]
+    * @param  [string] $url
+    * @param  [string] $title
+    * @param  [string] $summary
+    * @param  [string] $source
+    * @return [string]
     */
     public static function linkedin($url = null, $title = null, $summary = null, $source = null)
     {
@@ -54,6 +54,21 @@ class ShareLinks
             'title' => $title,
             'summary' => $summary,
             'source' => $source
+        ]);
+    }
+
+    /**
+     * Generate mailto link
+     * @param  [type] $dest    [description]
+     * @param  [type] $subject [description]
+     * @param  [type] $body    [description]
+     * @return [type]          [description]
+     */
+    public static function email($dest = null, $subject = null, $body = null)
+    {
+        return self::links('mailto:' . $dest, [
+            'subject' => $subject,
+            'body' => $body
         ]);
     }
 
@@ -71,7 +86,7 @@ class ShareLinks
                 $url .= '?';
             }
 
-            $url .= $key . '=' . $value ;
+            $url .= $key . '=' . urlencode($value) ;
             if($i < $len - 1) {
                 $url .= '&';
             }
