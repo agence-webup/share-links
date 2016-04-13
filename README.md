@@ -1,4 +1,5 @@
 # Share Links
+[![Build Status](https://travis-ci.org/agence-webup/share-links.svg?branch=master)](https://travis-ci.org/agence-webup/share-links)
 
 ## Install
 
